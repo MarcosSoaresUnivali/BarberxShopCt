@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/my_secondary"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="8dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Media -->
+            <ImageView
+                android:id="@+id/imageLocal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/content_description_media"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:tint="@color/my_primary"
+                app:srcCompat="@drawable/ic_service" />
+
+            <!-- Title, secondary and supporting text -->
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="SERVIÇOS"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                app:layout_constraintStart_toEndOf="@+id/imageLocal"
+                app:layout_constraintTop_toTopOf="@+id/imageLocal" />
+
+            <TextView
+                android:id="@+id/textDescr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/supporting_text"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintStart_toEndOf="@+id/imageLocal"
+                app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgBtEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Edit"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageLocal"
+                app:layout_constraintTop_toBottomOf="@+id/imageLocal"></androidx.appcompat.widget.AppCompatImageButton>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgBtDet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Details"
+                android:src="@drawable/ic_details"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgBtDel"
+                app:layout_constraintStart_toEndOf="@+id/imgBtEdit"></androidx.appcompat.widget.AppCompatImageButton>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgBtDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginEnd="88dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Delete"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"></androidx.appcompat.widget.AppCompatImageButton>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
